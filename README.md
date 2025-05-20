@@ -1,12 +1,57 @@
-# React + Vite
+# Front-end CRUD de Usuários
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um front-end simples desenvolvido com React e Vite, utilizando Axios para integração com o backend criado em Node.js. O objetivo deste projeto é demonstrar um CRUD (Create, Read, Update, Delete) básico de usuários, permitindo visualizar a lista de usuários, criar novos usuários e deletar usuários existentes.
 
-Currently, two official plugins are available:
+## Tecnologias utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **React**: Biblioteca JavaScript para construção da interface.
+* **Vite**: Ferramenta moderna e rápida para desenvolvimento de projetos React.
+* **Axios**: Biblioteca para realizar requisições HTTP ao backend.
 
-## Expanding the ESLint configuration
+## Funcionalidades implementadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Visualização dos usuários
+
+* Exibe um array contendo todos os usuários cadastrados.
+
+### Criação de usuário
+
+* Formulário simples com campos para `name`, `age` e `email`.
+* Ao submeter o formulário, um novo usuário é adicionado ao banco de dados.
+
+### Exclusão de usuário
+
+* Cada usuário listado possui um botão para deletá-lo.
+* Ao clicar no botão, o usuário é removido da lista e do banco de dados.
+
+## Integração com backend
+
+* O front-end está conectado com um backend desenvolvido com Node.js, Express e Prisma.
+* Todas as operações (criação, leitura e exclusão) refletem diretamente no banco de dados configurado no backend.
+
+## Como executar o projeto
+
+Siga os passos abaixo para executar o front-end localmente:
+
+### Clone o repositório
+
+```bash
+git clone <url_do_repositorio>
+```
+
+### Instale as dependências
+
+```bash
+cd nome-do-projeto
+npm install
+```
+
+### Execute o projeto
+
+```bash
+npm run dev
+```
+
+O front-end estará disponível na URL `http://localhost:5173`.
+
+Certifique-se de que o backend esteja em execução para garantir o correto funcionamento das requisições HTTP.
